@@ -65,7 +65,7 @@ for name in `find . -depth 1 -type d -not -name ".git" -exec basename {} \;`; do
         fi
         if [ -f "$SRCDIR/$name/addon.xml" ]; then
             cd $SRCDIR
-            zip -q -r $REPO/$name/$name-$VERSION.zip $name -x \*.zip -x *build* -x *__pycache__ -x *.externalTool* -x \*.pyo -x \*.pyc -x *.git* -x *.DS_Store* -x *.settings* -x *.project* -x *.pydevproject* -x \*.pxm -x *strings.xml
+            zip -q -r $REPO/$name/$name-$VERSION.zip $name -x \*.zip -x *tests* -x *build* -x *__pycache__ -x *.externalTool* -x \*.pyo -x \*.pyc -x *.git* -x *.DS_Store* -x *.settings* -x *.project* -x *.pydevproject* -x \*.pxm -x *strings.xml
     	else
             cd $REPO
             zip -q -r $REPO/$name/$name-$VERSION.zip $name -x \*.zip -x \*.md5
